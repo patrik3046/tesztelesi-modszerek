@@ -30,4 +30,34 @@ public class AverageTest {
         int[] numbers = {2, 4, 10};
         Assertions.assertEquals(5, Average.average(numbers));
     }
+
+    @Test
+    public void testAverage_int_exc() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            Average.average((int[]) null);
+        });
+    }
+
+    @Test
+    public void testAverage_double_exc() {
+        int[] numbers = {};
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            Average.average(numbers);
+        });
+    }
+
+    @Test
+    public void testAverage_int_exc_2() {
+        double[] numbers = {};
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            Average.average(numbers);
+        });
+    }
+
+    @Test
+    public void testAverage_double_exc_2() {
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            Average.average((double[]) null);
+        });
+    }
 }
