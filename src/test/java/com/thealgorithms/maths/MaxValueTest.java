@@ -11,4 +11,11 @@ public class MaxValueTest {
         assertEquals(3, MaxValue.max(3, 2));
         assertEquals(5, MaxValue.max(5, 5));
     }
+
+    @Test
+    public void maxTest2() {
+        assertEquals(6, MaxValue.max(5, 6));
+        assertEquals(-1, MaxValue.max(-3, -1));
+        assertEquals(3, MaxValue.max(2, 3));
+    }
 }
